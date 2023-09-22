@@ -1,3 +1,7 @@
-$primaria: rgb(255, 0, 0);
+@import './variaveis';
 @import './header';
 
+.div {
+    @include flexCenter();
+    @extend header;
+}

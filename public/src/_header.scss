@@ -1,12 +1,15 @@
-@mixin flexCenter() {
+@mixin flexCenter($direction, $position) {
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: $position;
+    flex-direction: $direction;
 }
 
 header {
-    @include flexCenter();
+    @include flexCenter(column, start);
     background-color: $primaria;
+    padding: 5px;
+    padding-bottom: 10px;
     h1 {
         padding: 10px;
         border-radius: 10px;

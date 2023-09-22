@@ -31,3 +31,5 @@
     <img width="75%" src="https://bg-so-1.zippyimage.com/2023/09/21/139ef156b3ccb3bd81e4148438f6ef1c.png" alt="Imagem para exemplo">
 </p>
 
+## Pegar atributos de uma tag e colocar em outra 
+ USar @extend ;
