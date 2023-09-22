@@ -1,0 +1,18 @@
+@mixin flexCenter() {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header {
+    @include flexCenter();
+    background-color: $primaria;
+    h1 {
+        padding: 10px;
+        border-radius: 10px;
+        color: white;
+        &:hover {
+            background-color: gray;
+        }
+    }
+}
