@@ -1,7 +1,2 @@
-@import './variaveis';
-@import './header';
-
-.div {
-    @include flexCenter();
-    @extend header;
-}
+@import 'components/variaveis';
+@import 'components/header';
