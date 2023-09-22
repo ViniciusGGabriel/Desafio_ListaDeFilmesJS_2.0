@@ -1,0 +1,8 @@
+header {
+  display: flex;
+  justify-content: center;
+  background-color: rgb(255, 0, 0);
+}
+header h1 {
+  color: white;
+}/*# sourceMappingURL=index.css.map */
