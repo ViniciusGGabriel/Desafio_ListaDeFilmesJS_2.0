@@ -1,3 +1,78 @@
-.them-checkbox {
-    appearance: none;
+@import 'variables';
+@import 'body';
+
+/* ==================== Função para o campo de darkmod ==================== */
+@mixin toggleFunction() {
+    isolation: isolate;
+    position: relative;
+    height: 30px;
+    width: 60px;
+    border-radius: 15px;
+    overflow: hidden;
+    .toggle-state {
+        display: none;
+    }
 }
+
+/* ========== Parte do código responsável por fazer o fundo do botão ==========*/
+.label {
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+    color: $blue-dark;
+
+    .label-text {
+        margin-left: 16px;
+    }
+}
+
+/* ========================= LIGHT MODE DO SITE BOTÃO ========================= */
+.toggleLight {
+    @include toggleFunction()
+
+    box-shadow: -8px -4px 8px 0px $shadowButtonThemeLight1,
+        8px 4px 12px 0px $shadowButtonThemeLight,
+        4px 4px 4px 0px $shadowButtonThemeLight inset,
+        -4px -4px 4px 0px $shadowButtonThemeLight1 inset;
+
+    .indicatorLight {
+        height: 100%;
+        width: 200%;
+        background: $ballThemeModeLight;
+        border-radius: 15px;
+        transform: translate3d(-75%, 0, 0);
+        transition: transform 0.4s cubic-bezier(0.85, 0.05, 0.18, 1.35);
+        box-shadow: -8px -4px 8px 0px $shadowButtonThemeLight1,
+            8px 4px 12px 0px $shadowButtonThemeLight;
+    }
+
+    .toggle-state:checked~.indicatorLight {
+        transform: translate3d(25%, 0, 0);
+    }
+}
+
+/* ========================= DARK MODE DO SITE BOTÃO ========================= */
+.toggleDark {
+    @include toggleFunction()
+
+    box-shadow: -8px -4px 8px 0px $shadowButtonThemeDark1,
+        8px 4px 12px 0px $shadowButtonThemeDark,
+        4px 4px 4px 0px $shadowButtonThemeDark inset,
+        -4px -4px 4px 0px $shadowButtonThemeDark1 inset;
+
+    .indicatorDark {
+        height: 100%;
+        width: 200%;
+        background: $ballThemeModeDark;
+        border-radius: 15px;
+        transform: translate3d(-75%, 0, 0);
+        transition: transform 0.4s cubic-bezier(0.85, 0.05, 0.18, 1.35);
+        box-shadow: -8px -4px 8px 0px $shadowButtonThemeDark1,
+            8px 4px 12px 0px $shadowButtonThemeDark;
+    }
+
+    .toggle-state:checked~.indicatorDark {
+        transform: translate3d(25%, 0, 0);
+    }
+}
+
