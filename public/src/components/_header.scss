@@ -1,20 +1,22 @@
 @import 'variables';
 @import 'body';
 
-/* ==================== Função para o campo de darkmod ==================== */
+// Função para os toogleDark e Light ==============================================
 @mixin toggleFunction() {
+
     isolation: isolate;
     position: relative;
     height: 30px;
     width: 60px;
     border-radius: 15px;
     overflow: hidden;
+
     .toggle-state {
         display: none;
     }
 }
 
-/* ========== Parte do código responsável por fazer o fundo do botão ==========*/
+// Parte do código responsável por fazer o fundo do botão ===========================
 .label {
     display: inline-flex;
     align-items: center;
@@ -26,14 +28,12 @@
     }
 }
 
-/* ========================= LIGHT MODE DO SITE BOTÃO ========================= */
+// Botão para o modo light do site ===================================================
 .toggleLight {
-    @include toggleFunction()
-
-    box-shadow: -8px -4px 8px 0px $shadowButtonThemeLight1,
-        8px 4px 12px 0px $shadowButtonThemeLight,
-        4px 4px 4px 0px $shadowButtonThemeLight inset,
-        -4px -4px 4px 0px $shadowButtonThemeLight1 inset;
+    @include toggleFunction() box-shadow: -8px -4px 8px 0px $shadowButtonThemeLight1,
+    8px 4px 12px 0px $shadowButtonThemeLight,
+    4px 4px 4px 0px $shadowButtonThemeLight inset,
+    -4px -4px 4px 0px $shadowButtonThemeLight1 inset;
 
     .indicatorLight {
         height: 100%;
@@ -51,14 +51,12 @@
     }
 }
 
-/* ========================= DARK MODE DO SITE BOTÃO ========================= */
+// Botão para o modo dark do site ====================================================
 .toggleDark {
-    @include toggleFunction()
-
-    box-shadow: -8px -4px 8px 0px $shadowButtonThemeDark1,
-        8px 4px 12px 0px $shadowButtonThemeDark,
-        4px 4px 4px 0px $shadowButtonThemeDark inset,
-        -4px -4px 4px 0px $shadowButtonThemeDark1 inset;
+    @include toggleFunction() box-shadow: -8px -4px 8px 0px $shadowButtonThemeDark1,
+    8px 4px 12px 0px $shadowButtonThemeDark,
+    4px 4px 4px 0px $shadowButtonThemeDark inset,
+    -4px -4px 4px 0px $shadowButtonThemeDark1 inset;
 
     .indicatorDark {
         height: 100%;
@@ -75,4 +73,3 @@
         transform: translate3d(25%, 0, 0);
     }
 }
-
