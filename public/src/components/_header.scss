@@ -1,7 +1,7 @@
 @import 'variables';
-@import 'section';
+@import 'article';
 
-// Função para os toogleDark e Light ==============================================
+// Função para os toggleDark e Light ==============================================
 @mixin toggleFunction() {
 
     isolation: isolate;
@@ -30,7 +30,8 @@
 
 // Botão para o modo light do site ===================================================
 .toggleLight {
-    @include toggleFunction() box-shadow: -8px -4px 8px 0px $shadowButtonThemeLight1,
+    @include toggleFunction(); 
+    box-shadow: -8px -4px 8px 0px $shadowButtonThemeLight1,
     8px 4px 12px 0px $shadowButtonThemeLight,
     4px 4px 4px 0px $shadowButtonThemeLight inset,
     -4px -4px 4px 0px $shadowButtonThemeLight1 inset;
@@ -53,7 +54,8 @@
 
 // Botão para o modo dark do site ====================================================
 .toggleDark {
-    @include toggleFunction() box-shadow: -8px -4px 8px 0px $shadowButtonThemeDark1,
+    @include toggleFunction();
+    box-shadow: -8px -4px 8px 0px $shadowButtonThemeDark1,
     8px 4px 12px 0px $shadowButtonThemeDark,
     4px 4px 4px 0px $shadowButtonThemeDark inset,
     -4px -4px 4px 0px $shadowButtonThemeDark1 inset;

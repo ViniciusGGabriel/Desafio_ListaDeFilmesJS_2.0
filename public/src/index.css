@@ -74,5 +74,4 @@
 .toggleDark .toggle-state:checked~.indicatorDark {
     transform: translate3d(25%, 0, 0);
 }
-
 /*# sourceMappingURL=index.css.map */
