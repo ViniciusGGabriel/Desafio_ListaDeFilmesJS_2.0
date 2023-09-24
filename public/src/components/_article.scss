@@ -1,11 +1,21 @@
 @import 'variables';
 
-@media screen and (max-width: $tablet-scream) {
+@media screen and (max-width: $mobile-scream-max) {
     .container {
         margin: 0 auto;
         #list {
             display: grid;
-            grid-template-columns: auto auto;
+            grid-template-columns: 1fr;
+        }
+    }
+}
+
+@media screen and (min-width: $tablet-scream-min) and (max-width: $tablet-scream-max) {
+    .container {
+        margin: 0 auto;
+        #list {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
         }
     }
 }
