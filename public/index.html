@@ -25,9 +25,12 @@
 
 <body>
     <!-- =========================== Navar da aplicação =========================== -->
-    <nav class="navbar navbar-expand-sm">
+    <nav class="navbar navbar-expand-sm bg-warning">
         <div class="container">
-            <a class="navbar-brand" href="#">THEmovie</a>
+            <a class="navbar-brand" href="#">
+                <img src="https://bg-so-1.zippyimage.com/2023/09/23/8578b484103dfaa009b25ff7865e5683.png" class="logo" alt="Bootstrap" width="90" height="80">
+              </a>
+            <a class="navbar-brand" href="#">MONKEYmovies</a>
             <!-- ================== Botão para o modo de celular ================== -->
             <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse"
                 data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false"
@@ -36,10 +39,10 @@
             </button>
             <!-- ===================== Componentes da navbar ====================== -->
             <div class="collapse navbar-collapse" id="collapsibleNavId">
-                <ul class="navbar-nav me-auto mt-2 mt-lg-0">
+                <ul class="navbar-nav me-auto mt-3 mt-lg-0">
                     <!-- ================ Botão "Clique para mais ================" -->
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-bs-toggle="dropdown"
+                        <a class="nav-link dropdown-toggle mt-1" href="#" id="dropdownId" data-bs-toggle="dropdown"
                             aria-haspopup="true" aria-expanded="false">clique para mais</a>
                         <div class="dropdown-menu" aria-labelledby="dropdownId">
                             <a class="dropdown-item" href="https://github.com/ViniciusGGabriel?tab=repositories"
@@ -64,7 +67,7 @@
                 <!-- ====================== Barra de pesquisa ====================== -->
                 <form class="d-flex my-2 my-lg-0" id="search">
                     <input class="form-control me-sm-2" type="text" placeholder="pesquisar" name="pesquisa">
-                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">pesquisar</button>
+                    <button class="btn btn-outline-light my-2 my-sm-0" type="submit">pesquisar</button>
                 </form>
             </div>
         </div>
@@ -77,7 +80,7 @@
         </header>
 
         <article class="container">
-            <h1 class="mt-5 mb-4">Busque o filme na barra de pesquisa</h1>
+            <h1 class="mt-5 mb-4">Filmes: </h1>
             <!-- =========================== Filmes ========================== -->
             <div class="row" id="list">
                 <div class="col-md-2 mb-4">
@@ -86,12 +89,14 @@
         </article>
 
         <footer class="final">
-            
+
         </footer>
 
     </section>
     <footer class="">
-        <p>viniciusggabriel989@gmail.com</p>
+        <div class="d-flex align-items-end flex-column mb-3">
+            <p class="d-flex justify-contet-end mt-auto">viniciusggabriel989@gmail.com</p>
+        </div>
     </footer>
 
     <!-- Link para o JavaScript principal para DOM -->

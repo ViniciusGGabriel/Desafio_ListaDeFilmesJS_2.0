@@ -36,7 +36,7 @@ const carregaLista = (json) => {
                                 <img src="${movie.Poster}" class="card-img-top img-fluid" id="card-image" style="height: 70%; object-fit: cover;" alt="">
                                 <div class="card-body">
                                     <h5 class="card-title">${movie.Title}</h5>
-                                    <p class="card-text">Diretor: ${movie.Director}</p>
+                                    <p class="card-text">Diretor: ${movie.Directo}</p>
                                     <p class="card-text">Ano: ${movie.Year}</p>
                                     <p class="card-text">Tipo: ${movie.Type}</p>
                                 </div>
