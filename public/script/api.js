@@ -11,7 +11,7 @@ formulaPesquisa.onsubmit = (ev) => {
         return;
     }
 
-    fetch(`http://www.omdbapi.com/?apikey=${apiKey}&s=${valorPesquisa}`)
+    fetch(`https://www.omdbapi.com/?apikey=${apiKey}&s=${valorPesquisa}`)
         .then(result => result.json())
         .then(json => carregaLista(json))
         .catch(error => console.error('Erro:', error));
