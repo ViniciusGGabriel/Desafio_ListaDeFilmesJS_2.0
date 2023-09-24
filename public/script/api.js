@@ -30,15 +30,15 @@ const carregaLista = (json) => {
     if (json.Search && json.Search.length > 0) {
         json.Search.forEach(movie => {
             let item = document.createElement("div");
-            item.classList.add("col-md-4", "mb-4", "w-25");
+            item.classList.add("col-md-4", "mb-4");
             // Coloca os atributos dentro do HTML =========================================================
-            item.innerHTML = `<div class="card" style="width: 18rem; height: 700px;">
-                                <img src="${movie.Poster}" class="card-img-top img-fluid" id="card-image" style="height: 70%; object-fit: cover;" alt="">
+            item.innerHTML = `<div class="card mx-auto" style="width: 18rem; height: 700px;">
+                                <img src="${movie.Poster}" class="card-img-top img-fluid" style="height: 70%; object-fit: cover;" alt="">
                                 <div class="card-body">
                                     <h5 class="card-title">${movie.Title}</h5>
-                                    <p class="card-text">Diretor: ${movie.y}</p>
                                     <p class="card-text">Ano: ${movie.Year}</p>
                                     <p class="card-text">Tipo: ${movie.Type}</p>
+                                    <p class="card-text">Id movie: ${movie.imdbID}</p>
                                 </div>
                              </div>`;
             lista.appendChild(item);

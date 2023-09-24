@@ -40,7 +40,7 @@
             </button>
             <!-- ===================== Componentes da navbar ====================== -->
             <div class="collapse navbar-collapse" id="collapsibleNavId">
-                <ul class="navbar-nav me-auto mt-3 mt-lg-0">
+                <ul class="navbar-nav me-auto mt-lg-0">
                     <!-- ================ Botão "Clique para mais ================" -->
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle mt-1" href="#" id="dropdownId" data-bs-toggle="dropdown"
@@ -55,8 +55,8 @@
                         </div>
                     </li>
                     <!-- ======= Botão de troca de tema de escuro para claro ======= -->
-                    <li class="nav-item mt-2">
-                        <label class="label ms-3">
+                    <li class="nav-item mt-2 me-3">
+                        <label class="label">
                             <div class="toggleDark toggleLight" id="buttonTheme">
                                 <input class="toggle-state" type="checkbox" name="check" value="check" id="checkbox"
                                     onclick="modeTheme()" placeholder="switchMode">
@@ -74,13 +74,14 @@
         </div>
     </nav>
 
+    <!-- ======================== Conteúdo da aplicação ======================== -->
     <section class="bg-warning m-3 rounded-2">
         <!-- ======================== Carrossel de filmes ======================= -->
         <header class="">
 
         </header>
 
-        <article class="container">
+        <article class="container d-flex flex-column align-items-center justify-content-center">
             <!-- =========================== Filmes ========================== -->
             <h1 class="mt-5 mb-4">Filmes: </h1>
             <div class="row" id="list">
@@ -93,6 +94,7 @@
         </footer>
 
     </section>
+
     <footer class="">
         <div class="d-flex align-items-end flex-column mb-3">
             <p class="d-flex justify-contet-end mt-auto">viniciusggabriel989@gmail.com</p>

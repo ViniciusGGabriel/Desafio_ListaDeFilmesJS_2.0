@@ -16,6 +16,11 @@
     }
 }
 
+@mixin hoverBall {
+    transform: scale(105%);
+    transition: 0.5s;
+}
+
 .logo {
     margin: -15px;
 }
@@ -34,11 +39,11 @@
 
 // Botão para o modo light do site ===================================================
 .toggleLight {
-    @include toggleFunction(); 
+    @include toggleFunction();
     box-shadow: -8px -4px 8px 0px $shadowButtonThemeLight1,
-    8px 4px 12px 0px $shadowButtonThemeLight,
-    4px 4px 4px 0px $shadowButtonThemeLight inset,
-    -4px -4px 4px 0px $shadowButtonThemeLight1 inset;
+        8px 4px 12px 0px $shadowButtonThemeLight,
+        4px 4px 4px 0px $shadowButtonThemeLight inset,
+        -4px -4px 4px 0px $shadowButtonThemeLight1 inset;
 
     .indicatorLight {
         height: 100%;
@@ -60,9 +65,9 @@
 .toggleDark {
     @include toggleFunction();
     box-shadow: -8px -4px 8px 0px $shadowButtonThemeDark1,
-    8px 4px 12px 0px $shadowButtonThemeDark,
-    4px 4px 4px 0px $shadowButtonThemeDark inset,
-    -4px -4px 4px 0px $shadowButtonThemeDark1 inset;
+        8px 4px 12px 0px $shadowButtonThemeDark,
+        4px 4px 4px 0px $shadowButtonThemeDark inset,
+        -4px -4px 4px 0px $shadowButtonThemeDark1 inset;
 
     .indicatorDark {
         height: 100%;

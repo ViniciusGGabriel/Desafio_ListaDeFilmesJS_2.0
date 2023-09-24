@@ -1,8 +1,11 @@
 @import 'variables';
 
-@media screen and (max-width: 768px) {
-    div.col-md-4 {
-        
+@media screen and (max-width: $tablet-scream) {
+    .container {
+        margin: 0 auto;
+        #list {
+            display: grid;
+            grid-template-columns: auto auto;
+        }
     }
 }
-
