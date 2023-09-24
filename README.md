@@ -1,35 +1,18 @@
-# ProjetoSass
- Aprendendo como usar a ferramento SASS
+# Projeto MONKEYmovies
+O projeto é um buscador de filmes que mostra a data, OMDBid, tipo e titulo do filme;
+O projeto tem modo escuro e claro por meio da manipulação da DOM com javascript puro e tem interação com a API do OMDb
 
-# Benefícios do SASS
-## Variáveis
- Um dos benefícios do SASS é o uso de variáveis que é representada por $
- Hoje em dia o css já tem o uso de variáveis porem com SASS fica mais pratico 
- Na sintaxe do SCSS as variáveis vem primeiro
-
-## Agrupamentos
- É possível fazer um seletor de forma mais eficiente que seria dentro de uma personalização chamar outras assim como no exemplo a baixo 
-
+## Versão para telas grandes
 <p align="center">
-    <img width="75%" src="https://bg-so-1.zippyimage.com/2023/09/21/e4ab207516df4b9d046351e952513e0f.md.png" alt="Imagem para exemplo">
+    <img width="75%" src="https://bg-so-1.zippyimage.com/2023/09/24/39c3bea91a1c2a97931797a58b0b9ee1.jpg" alt="Imagem para exemplo">
 </p>
 
-## Fazer animações 
- Para fazer animações em SASS tem que usar o &:: e selecionar a que desejar e se não tiver funcionando ele tem que estar dentro do chaveamento da tag desejada 
-
-## Criação de componentes 
- No SASS é possível a criação de componentes para poder ficar mais organizado o código de estilização
- @import'';
-
- ## Funções prontas 
- As funções sendo muito UTEIS para poder usar grandes partes de código SCSS em uma tag ápenas 
-
- <p align="center">
-    <img width="75%" src="https://bg-so-1.zippyimage.com/2023/09/21/a5e1180b18220c7b11d936a645a7947f.png" alt="Imagem para exemplo">
-</p>
- <p align="center">
-    <img width="75%" src="https://bg-so-1.zippyimage.com/2023/09/21/139ef156b3ccb3bd81e4148438f6ef1c.png" alt="Imagem para exemplo">
+## Versão para telas medias como tablets
+<p align="center">
+    <img width="50%" src="https://bg-so-1.zippyimage.com/2023/09/24/337cfe9867ec388ae07b915d185b32b1.png" alt="Imagem para exemplo">
 </p>
 
-## Pegar atributos de uma tag e colocar em outra 
- USar @extend ;
+## Versão para celular
+<p align="center">
+    <img width="35%" src="https://bg-so-1.zippyimage.com/2023/09/24/62a1d56969117f1b10f683edd0ed69d5.png" alt="Imagem para exemplo">
+</p>
