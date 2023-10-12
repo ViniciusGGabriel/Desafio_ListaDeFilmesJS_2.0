@@ -1,101 +1,154 @@
 <!DOCTYPE html>
 <html lang="pt-br" id="mainTheme" data-bs-theme="dark">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Permissions-Policy" content="default-src 'self' https://www.omdbapi.com/">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      http-equiv="Permissions-Policy"
+      content="default-src 'self' https://www.omdbapi.com/"
+    />
 
     <!-- ================== LINKS ================== -->
     <!-- Link do css -->
-    <link rel="stylesheet" href="src/index.css">
+    <link rel="stylesheet" href="src/index.css" />
     <!-- Link bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-        crossorigin="anonymous"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
     <!-- Ícones bootstrap -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+    />
     <!-- Link do Axios -->
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <!-- ============================================= -->
     <!-- ============== Link do favicon ============== -->
-    <link rel="shortcut icon" href="src/img/icone.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="src/img/icone.ico" type="image/x-icon" />
     <title>MONKEYmovies</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <!-- =========================== Navar da aplicação =========================== -->
     <nav class="navbar navbar-expand-sm bg-warning">
-        <div class="container">
-            <a class="navbar-brand" href="#">
-                <img src="https://bg-so-1.zippyimage.com/2023/09/23/8578b484103dfaa009b25ff7865e5683.png" class="logo" alt="Bootstrap" width="90" height="80">
-              </a>
-            <a class="navbar-brand" href="#">MONKEYmovies</a>
-            <!-- ================== Botão para o modo de celular ================== -->
-            <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse"
-                data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <img
+            src="https://bg-so-1.zippyimage.com/2023/09/23/8578b484103dfaa009b25ff7865e5683.png"
+            class="logo"
+            alt="Bootstrap"
+            width="90"
+            height="80"
+          />
+        </a>
+        <a class="navbar-brand" href="#">MONKEYmovies</a>
+        <!-- ================== Botão para o modo de celular ================== -->
+        <button
+          class="navbar-toggler d-lg-none"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#collapsibleNavId"
+          aria-controls="collapsibleNavId"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- ===================== Componentes da navbar ====================== -->
+        <div class="collapse navbar-collapse" id="collapsibleNavId">
+          <ul class="navbar-nav me-auto mt-lg-0">
+            <!-- ================ Botão "Clique para mais ================" -->
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle mt-1"
+                href="#"
+                id="dropdownId"
+                data-bs-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+                >clique para mais</a
+              >
+              <div class="dropdown-menu" aria-labelledby="dropdownId">
+                <a
+                  class="dropdown-item"
+                  href="https://github.com/ViniciusGGabriel?tab=repositories"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  ><i class="bi bi-github me-2"></i>Github</a
+                >
+                <a
+                  class="dropdown-item"
+                  href="https://www.linkedin.com/in/vin%C3%ADcius-gabriel-pereira-leit%C3%A3o/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  ><i class="bi bi-linkedin me-2"></i>LinkedIn</a
+                >
+              </div>
+            </li>
+            <!-- ======= Botão de troca de tema de escuro para claro ======= -->
+            <li class="nav-item mt-2 me-3">
+              <label class="label">
+                <div class="toggleDark toggleLight" id="buttonTheme">
+                  <input
+                    class="toggle-state"
+                    type="checkbox"
+                    name="check"
+                    value="check"
+                    id="checkbox"
+                    onclick="modeTheme()"
+                    placeholder="switchMode"
+                  />
+                  <div class="indicatorDark indicatorLight"></div>
+                </div>
+              </label>
+            </li>
+          </ul>
+          <!-- ====================== Barra de pesquisa ====================== -->
+          <form class="d-flex my-2 my-lg-0" id="search">
+            <input
+              class="form-control me-sm-2"
+              type="text"
+              placeholder="pesquisar"
+              name="pesquisa"
+            />
+            <button class="btn btn-outline-light my-2 my-sm-0" type="submit">
+              pesquisar
             </button>
-            <!-- ===================== Componentes da navbar ====================== -->
-            <div class="collapse navbar-collapse" id="collapsibleNavId">
-                <ul class="navbar-nav me-auto mt-lg-0">
-                    <!-- ================ Botão "Clique para mais ================" -->
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle mt-1" href="#" id="dropdownId" data-bs-toggle="dropdown"
-                            aria-haspopup="true" aria-expanded="false">clique para mais</a>
-                        <div class="dropdown-menu" aria-labelledby="dropdownId">
-                            <a class="dropdown-item" href="https://github.com/ViniciusGGabriel?tab=repositories"
-                                target="_blank" rel="noopener noreferrer"><i class="bi bi-github me-2"></i>Github</a>
-                            <a class="dropdown-item"
-                                href="https://www.linkedin.com/in/vin%C3%ADcius-gabriel-pereira-leit%C3%A3o/"
-                                target="_blank" rel="noopener noreferrer"><i
-                                    class="bi bi-linkedin me-2"></i>LinkedIn</a>
-                        </div>
-                    </li>
-                    <!-- ======= Botão de troca de tema de escuro para claro ======= -->
-                    <li class="nav-item mt-2 me-3">
-                        <label class="label">
-                            <div class="toggleDark toggleLight" id="buttonTheme">
-                                <input class="toggle-state" type="checkbox" name="check" value="check" id="checkbox"
-                                    onclick="modeTheme()" placeholder="switchMode">
-                                <div class="indicatorDark indicatorLight"></div>
-                            </div>
-                        </label>
-                    </li>
-                </ul>
-                <!-- ====================== Barra de pesquisa ====================== -->
-                <form class="d-flex my-2 my-lg-0" id="search">
-                    <input class="form-control me-sm-2" type="text" placeholder="pesquisar" name="pesquisa">
-                    <button class="btn btn-outline-light my-2 my-sm-0" type="submit">pesquisar</button>
-                </form>
-            </div>
+          </form>
         </div>
+      </div>
     </nav>
 
     <!-- ======================== Conteúdo da aplicação ======================== -->
     <section class="bg-warning m-3 rounded-2">
-        <article class="container d-flex flex-column align-items-center justify-content-center">
-            <!-- =========================== Filmes ========================== -->
-            <h1 class="mt-5 mb-4">Filmes: </h1>
-            <div class="row" id="list">
-                
-            </div>
-        </article>
+      <article
+        class="container d-flex flex-column align-items-center justify-content-center"
+      >
+        <!-- =========================== Filmes ========================== -->
+        <h1 class="mt-5 mb-4">Filmes:</h1>
+        <div class="row" id="list"></div>
+      </article>
     </section>
 
     <footer class="">
-        <div class="d-flex align-items-end flex-column mb-3">
-            <p class="d-flex justify-contet-end mt-auto">viniciusggabrielpl@gmail.com</p>
-        </div>
+      <div class="d-flex align-items-end flex-column mb-3">
+        <p class="d-flex justify-contet-end mt-auto">
+          viniciusggabrielpl@gmail.com
+        </p>
+      </div>
     </footer>
 
     <!-- Link para o JavaScript principal para DOM -->
     <script src="script/main.js"></script>
     <!-- Link JavaScript API -->
     <script src="script/api.js"></script>
-</body>
-
+  </body>
 </html>
